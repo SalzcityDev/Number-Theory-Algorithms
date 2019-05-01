@@ -1,4 +1,4 @@
-def solve_diphantic_linear_eq(a,b,d):
+def solve_linear_diphantine_eq(a,b,d):
     c=eea(a,b)
     if d%c[0]==0:
         return (c[1]*d//c[0],c[2]*d//c[0])
