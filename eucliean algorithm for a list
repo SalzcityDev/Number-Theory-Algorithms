@@ -1,0 +1,12 @@
+def ea_list(lst):
+    l= len(lst)
+    if l==0:
+        return None
+    elif l==1:
+        return lst[0]
+    else:
+        d= ea(lst[0],lst[1])
+        for i in [2..l-1]:
+            d= ea(d,lst[i])
+            
+        return d
