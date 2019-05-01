@@ -1,13 +1,10 @@
-''' Algoritmo de Euclides para el cálculo del m.c.d de los números enteros a y b
+''' Greatest Comon Divisor Algorithm of two integer numbers a and b using Eucliean Algorithm
 '''
 
-def ea(a,b):
+def gcd(a,b):
     r= abs(a)
     s= abs(b)
     m=1
-    
-    if a<b:
-        r,s = s,r
     
     while r%2==0 and s%2==0:
         m,r,s= 2*m,r//2,s//2
