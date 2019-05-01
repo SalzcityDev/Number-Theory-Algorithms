@@ -1,0 +1,24 @@
+''' Algoritmo de Euclides para el cálculo del m.c.d de los números enteros a y b
+'''
+
+def ea(a,b):
+    r= abs(a)
+    s= abs(b)
+    m=1
+    
+    if a<b:
+        r,s = s,r
+    
+    while r%2==0 and s%2==0:
+        m,r,s= 2*m,r//2,s//2
+        
+    while r%2==0:
+        r= r//2
+        
+    while s%2==0:
+        s= s//2
+        
+    while s!=0:
+        r,s = s, r%s
+        
+    return m*r
