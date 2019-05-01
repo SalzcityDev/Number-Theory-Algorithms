@@ -1,12 +1,13 @@
-''' Algoritmo Extendido de Euclides
+''' Greatest Comon Divisor Algorithm of two integer numbers a and b using the Extended Eucliean Algorithm
+
+    Let be x and y integer numbers egcd return a tuple with three elements (d,s,t) such that d is the gcd of x any y 
+    and x*s + y*t = d
 '''
 
-def eea(x,y):
+def egcd(x,y):
     a= [1,0,abs(x)]
     b= [0,1,abs(y)]
-    
-    if a[2]<b[2]:
-        a[2],b[2] = b[2],a[2]
+
         
     while b[2]!=0:
         m= a[2]//b[2]
@@ -15,8 +16,7 @@ def eea(x,y):
             a[i]=b[i]
             b[i]= r
 
-    if abs(x)<abs(y):
-        a[0],a[1]= a[1], a[0]
+
     if x == -abs(x):
         a[0] = -a[0]   
     if y == -abs(y):
